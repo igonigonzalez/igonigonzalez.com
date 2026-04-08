@@ -7,7 +7,7 @@ export function Hero() {
       <div className="absolute inset-0 w-full h-full">
         <img
           src="/hero-image.jpg"
-          alt="Bruce Banner"
+          alt="Ignacio Goñi González"
           className="w-full h-full object-cover object-center"
         />
         {/* Dark overlay for better text readability */}
