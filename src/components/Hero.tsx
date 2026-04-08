@@ -24,9 +24,9 @@ export function Hero() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             <h1 className="font-display leading-none tracking-tighter text-[15vw] sm:text-[12vw] md:text-hero">
-              <span className="block text-white">BRUCE</span>
-              <span className="block text-white">BANNER</span>
-              <span className="block text-white">PHOTOGRAPHY</span>
+              <span className="block text-white">IGNACIO</span>
+              <span className="block text-white">GOÑI</span>
+              <span className="block text-white">GONZÁLEZ</span>
             </h1>
             
             <motion.p
