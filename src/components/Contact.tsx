@@ -86,13 +86,13 @@ export function Contact() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-16">
             <a
-              href="mailto:bruce@banner.photography"
+              href="mailto:ignacio@gonzalez.photography"
               className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
-              bruce@banner.photography
+              ignacio@gonzalez.photography
             </a>
             <a
-              href="https://instagram.com/brucebanner"
+              href="https://instagram.com/ignaciogonzalez"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
@@ -100,7 +100,7 @@ export function Contact() {
               Instagram
             </a>
             <a
-              href="https://vimeo.com/brucebanner"
+              href="https://vimeo.com/ignaciogonzalez"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
@@ -116,7 +116,7 @@ export function Contact() {
           className="mt-24 lg:mt-32 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-xs text-gray-600">
-            © {new Date().getFullYear()} Bruce Banner Photography. All rights reserved.
+            © {new Date().getFullYear()} Ignacio Goñi González Photography. All rights reserved.
           </p>
           <p className="text-xs text-gray-600">
             New York / London

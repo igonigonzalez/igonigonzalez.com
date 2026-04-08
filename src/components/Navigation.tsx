@@ -13,7 +13,7 @@ const navItems = [
 ]
 
 const socialLinks = [
-  { label: 'Mail', href: 'mailto:bruce@banner.com' },
+  { label: 'Mail', href: 'mailto:ignacio@gonzalez.com' },
   { label: 'Instagram', href: 'https://instagram.com' },
   { label: 'Vimeo', href: 'https://vimeo.com' },
 ]
