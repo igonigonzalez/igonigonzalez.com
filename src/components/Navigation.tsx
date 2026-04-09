@@ -14,7 +14,7 @@ const navItems = [
 
 const socialLinks = [
   
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/igonigonzalez' },
+  
   { label: 'Newsletter', href: 'https://pulsodiario.igonigonzalez.com' },
 ]
 
