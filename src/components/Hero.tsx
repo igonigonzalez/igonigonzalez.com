@@ -25,7 +25,7 @@ export function Hero() {
           >
             <h1 className="font-display leading-[1.05] tracking-tighter text-[15vw] sm:text-[12vw] md:text-hero">
               <span className="block text-white">IGNACIO</span>
-              <span className="block text-white">GOÑI</span>
+              <span className="mt-[0.06em] block text-white">GOÑI</span>
               <span className="block text-white">GONZÁLEZ</span>
             </h1>
             
