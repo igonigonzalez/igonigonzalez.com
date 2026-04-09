@@ -1,4 +1,8 @@
 import { motion } from 'framer-motion'
+import eduEsic from '@/assets/edu-esic.jpg'
+import eduValley from '@/assets/edu-valley.jpg'
+import eduUpnaMaster from '@/assets/edu-upna-master.jpg'
+import eduUpnaGrado from '@/assets/edu-upna-grado.jpg'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -30,9 +34,12 @@ export function Education() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div {...fadeInUp}>
               <img
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="ESIC Business & Marketing School"
+                src={eduEsic}
+                alt="ESIC Business & Marketing School - Gaming & Esports"
                 className="w-full h-auto grayscale"
+                loading="lazy"
+                width={1200}
+                height={800}
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
                 ESIC BUSINESS & MARKETING SCHOOL - MADRID
@@ -83,9 +90,12 @@ export function Education() {
               className="lg:order-1"
             >
               <img
-                src="https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src={eduValley}
                 alt="The Valley Digital Business School"
                 className="w-full h-auto grayscale"
+                loading="lazy"
+                width={1200}
+                height={800}
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
                 THE VALLEY DIGITAL BUSINESS SCHOOL - MADRID
@@ -97,9 +107,12 @@ export function Education() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div {...fadeInUp}>
               <img
-                src="https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Universidad Pública de Navarra"
+                src={eduUpnaMaster}
+                alt="Laboratorio de materiales - Universidad Pública de Navarra"
                 className="w-full h-auto grayscale"
+                loading="lazy"
+                width={1200}
+                height={800}
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
                 UNIVERSIDAD PÚBLICA DE NAVARRA - PAMPLONA
@@ -150,9 +163,12 @@ export function Education() {
               className="lg:order-1"
             >
               <img
-                src="https://images.pexels.com/photos/256395/pexels-photo-256395.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Universidad Pública de Navarra Campus"
+                src={eduUpnaGrado}
+                alt="Taller de ingeniería mecánica"
                 className="w-full h-auto grayscale"
+                loading="lazy"
+                width={1200}
+                height={800}
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
                 UNIVERSIDAD PÚBLICA DE NAVARRA - PAMPLONA
