@@ -26,16 +26,16 @@ export function Education() {
 
         {/* Education Items */}
         <div className="space-y-16 lg:space-y-24">
-          {/* MIT */}
+          {/* ESIC */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div {...fadeInUp}>
               <img
-                src="https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="MIT Campus"
+                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="ESIC Business & Marketing School"
                 className="w-full h-auto grayscale"
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-                MIT - CAMBRIDGE / USA
+                ESIC BUSINESS & MARKETING SCHOOL - MADRID
               </p>
             </motion.div>
 
@@ -46,19 +46,19 @@ export function Education() {
             >
               <div>
                 <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
-                  Computer Science & Visual Arts
+                  Master en Gaming & Esports Business Development
                 </h3>
                 <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  Started with algorithms, ended with apertures. Ignacio's time at MIT 
-                  gave him a unique perspective on the intersection of technology 
-                  and visual storytelling that continues to influence his work today.
+                  Formación especializada en el ecosistema de gaming y esports, 
+                  abarcando modelos de negocio, estrategias de monetización 
+                  y desarrollo de marca en la industria del entretenimiento digital.
                 </p>
-                <p className="text-sm text-gray-500">2008 — 2012</p>
+                <p className="text-sm text-gray-500">FEB 2020 — ABR 2020</p>
               </div>
             </motion.div>
           </div>
 
-          {/* Parsons */}
+          {/* The Valley */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div
               {...fadeInUp}
@@ -66,14 +66,14 @@ export function Education() {
             >
               <div>
                 <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
-                  Photography & Visual Storytelling
+                  Master en Digital Business (MDB+)
                 </h3>
                 <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  The decision to pursue photography full-time led Ignacio to Parsons, 
-                  where he developed his signature style of documentary portraiture 
-                  and learned the fundamentals of visual narrative.
+                  Programa avanzado en transformación digital, estrategia de negocio 
+                  digital, e-commerce y marketing digital. Una formación clave en la 
+                  transición de ingeniería a liderazgo en marketing digital.
                 </p>
-                <p className="text-sm text-gray-500">2013 — 2015</p>
+                <p className="text-sm text-gray-500">OCT 2015 — JUL 2016</p>
               </div>
             </motion.div>
 
@@ -84,25 +84,25 @@ export function Education() {
             >
               <img
                 src="https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Parsons School of Design"
+                alt="The Valley Digital Business School"
                 className="w-full h-auto grayscale"
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-                PARSONS SCHOOL OF DESIGN - NEW YORK / USA
+                THE VALLEY DIGITAL BUSINESS SCHOOL - MADRID
               </p>
             </motion.div>
           </div>
 
-          {/* ICP */}
+          {/* UPNA - Master */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div {...fadeInUp}>
               <img
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="International Center of Photography"
+                src="https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Universidad Pública de Navarra"
                 className="w-full h-auto grayscale"
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-                ICP - NEW YORK / USA
+                UNIVERSIDAD PÚBLICA DE NAVARRA - PAMPLONA
               </p>
             </motion.div>
 
@@ -113,15 +113,50 @@ export function Education() {
             >
               <div>
                 <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
-                  Documentary Photography Certificate
+                  Master en Ingeniería de Materiales y Fabricación
                 </h3>
                 <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  An intensive program at ICP refined Ignacio's approach to long-form 
-                  documentary projects and deepened his understanding of photographic 
-                  ethics and storytelling responsibility.
+                  Especialización en ingeniería de materiales y procesos de fabricación 
+                  avanzados, con aplicación directa en la industria aeroespacial 
+                  y automoción.
                 </p>
-                <p className="text-sm text-gray-500">2016</p>
+                <p className="text-sm text-gray-500">SEP 2006 — JUN 2007</p>
               </div>
+            </motion.div>
+          </div>
+
+          {/* UPNA - Grado */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
+            <motion.div
+              {...fadeInUp}
+              className="flex items-center lg:order-2"
+            >
+              <div>
+                <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
+                  Ingeniería Mecánica
+                </h3>
+                <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
+                  Formación base en ingeniería mecánica que sentó las bases del 
+                  pensamiento analítico, resolución de problemas y rigor técnico 
+                  que Ignacio aplica hoy al marketing y la estrategia digital.
+                </p>
+                <p className="text-sm text-gray-500">SEP 2000 — SEP 2004</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              {...fadeInUp}
+              transition={{ ...fadeInUp.transition, delay: 0.2 }}
+              className="lg:order-1"
+            >
+              <img
+                src="https://images.pexels.com/photos/256395/pexels-photo-256395.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Universidad Pública de Navarra Campus"
+                className="w-full h-auto grayscale"
+              />
+              <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
+                UNIVERSIDAD PÚBLICA DE NAVARRA - PAMPLONA
+              </p>
             </motion.div>
           </div>
         </div>
