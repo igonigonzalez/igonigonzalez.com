@@ -13,8 +13,7 @@ const navItems = [
 ]
 
 const socialLinks = [
-  
-  
+  { label: 'YAMATO', href: 'https://yamato.digital/' },
   { label: 'Newsletter', href: 'https://pulsodiario.igonigonzalez.com' },
 ]
 
