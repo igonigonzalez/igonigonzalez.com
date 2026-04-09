@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion'
+import aboutEngineering from '@/assets/about-engineering.jpg'
+import aboutMarketing from '@/assets/about-marketing.jpg'
+import aboutNewsletter from '@/assets/about-newsletter.jpg'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -24,9 +27,12 @@ export function About() {
             className="order-2 lg:order-1"
           >
             <img
-              src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Ignacio trabajando"
+              src={aboutEngineering}
+              alt="Industria aeronáutica"
               className="w-full h-auto grayscale"
+              loading="lazy"
+              width={1200}
+              height={800}
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
               DE INGENIERO A CMO - MADRID / ESPAÑA
@@ -85,9 +91,12 @@ export function About() {
             transition={{ ...fadeInUp.transition, delay: 0.2 }}
           >
             <img
-              src="https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Estrategia de marketing"
+              src={aboutMarketing}
+              alt="Estrategia de marketing digital"
               className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+              loading="lazy"
+              width={1200}
+              height={800}
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
               YAMATO DIGITAL - MADRID / ESPAÑA
@@ -99,9 +108,12 @@ export function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
           <motion.div {...fadeInUp}>
             <img
-              src="https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Pulso Diario newsletter"
+              src={aboutNewsletter}
+              alt="Escribiendo Pulso Diario"
               className="w-full h-auto grayscale"
+              loading="lazy"
+              width={1200}
+              height={800}
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
               PULSO DIARIO - NEWSLETTER DIARIA<br />
