@@ -5,17 +5,17 @@ import { cn } from '@/lib/utils'
 
 const navItems = [
   { id: 'about', label: 'Sobre mí' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'work', label: 'Work' },
-  { id: 'education', label: 'Education' },
-  { id: 'writing', label: 'Writing' },
-  { id: 'speaking', label: 'Speaking' },
+  { id: 'skills', label: 'Habilidades' },
+  { id: 'work', label: 'Experiencia' },
+  { id: 'education', label: 'Formación' },
+  { id: 'writing', label: 'Publicaciones' },
+  { id: 'speaking', label: 'Charlas' },
 ]
 
 const socialLinks = [
-  { label: 'Mail', href: 'mailto:ignacio@gonzalez.com' },
-  { label: 'Instagram', href: 'https://instagram.com' },
-  { label: 'Vimeo', href: 'https://vimeo.com' },
+  { label: 'Email', href: 'mailto:igonigonzalez@gmail.com' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/igonigonzalez' },
+  { label: 'Newsletter', href: 'https://pulsodiario.igonigonzalez.com' },
 ]
 
 export function Navigation() {
@@ -41,7 +41,7 @@ export function Navigation() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="text-sm text-white mix-blend-difference"
           >
-            {mobileMenuOpen ? 'Close' : 'Menu'}
+            {mobileMenuOpen ? 'Cerrar' : 'Menú'}
           </button>
 
           {/* Mobile Menu Dropdown */}

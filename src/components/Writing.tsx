@@ -2,28 +2,28 @@ import { motion } from 'framer-motion'
 
 const articles = [
   {
-    title: 'Visual Storytelling in the Digital Age',
-    publication: 'Aperture Magazine',
+    title: 'Por qué es tan relevante la demanda de The New York Times contra OpenAI y Microsoft',
+    publication: 'Artículo de opinión',
+    year: '2024',
+    link: '#',
+  },
+  {
+    title: 'IA y periodismo: ¿amigos o enemigos?',
+    publication: 'Podcast',
+    year: '2024',
+    link: '#',
+  },
+  {
+    title: 'The New York Times vs OpenAI: la lucha por los derechos de autor',
+    publication: 'Podcast',
     year: '2023',
     link: '#',
   },
   {
-    title: 'The Ethics of Documentary Photography',
-    publication: 'Photography Journal',
-    year: '2022',
-    link: '#',
-  },
-  {
-    title: 'Finding Light in Darkness: A Personal Journey',
-    publication: 'The New York Times',
-    year: '2021',
-    link: '#',
-  },
-  {
-    title: 'Why Black & White Still Matters',
-    publication: 'British Journal of Photography',
-    year: '2020',
-    link: '#',
+    title: 'Pulso Diario — Newsletter diaria sobre marketing, estrategia e IA',
+    publication: 'Newsletter',
+    year: '2024',
+    link: 'https://pulsodiario.igonigonzalez.com',
   },
 ]
 
@@ -40,7 +40,7 @@ export function Writing() {
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Essays & Articles</span>
+          <span className="text-sm text-gray-500 tracking-widest uppercase">Artículos y podcasts</span>
           <div className="w-6 h-px bg-gray-600 mt-2" />
         </motion.div>
 
@@ -48,7 +48,7 @@ export function Writing() {
           {...fadeInUp}
           className="font-display text-[10vw] lg:text-section leading-none tracking-tight mb-16 lg:mb-24"
         >
-          WRITING
+          PUBLICACIONES
         </motion.h2>
 
         {/* Articles List */}
@@ -69,7 +69,7 @@ export function Writing() {
                     {article.title}
                   </h3>
                   <p className="text-sm text-gray-500 mt-1 md:mt-2">
-                    Essay — {article.publication}
+                    {article.publication}
                   </p>
                 </div>
                 <span className="text-sm text-gray-600">{article.year}</span>

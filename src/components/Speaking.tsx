@@ -2,33 +2,27 @@ import { motion } from 'framer-motion'
 
 const talks = [
   {
-    title: 'The Power of Visual Narrative',
-    event: 'Creative Conference Berlin',
+    title: 'Apariciones en medios sobre IA y marketing',
+    event: 'Medios de comunicación',
+    year: '2023-2024',
+    link: '#',
+  },
+  {
+    title: 'Hackathons y eventos de IA',
+    event: 'Clibrain AI',
     year: '2023',
     link: '#',
   },
   {
-    title: 'Documentary Photography in the Age of AI',
-    event: 'TED Talk',
-    year: '2023',
+    title: 'Marketing digital en la industria del lujo',
+    event: 'LVMH / Loewe Perfumes',
+    year: '2018-2021',
     link: '#',
   },
   {
-    title: 'Finding Your Voice Through the Lens',
-    event: 'PhotoLondon Festival',
-    year: '2022',
-    link: '#',
-  },
-  {
-    title: 'The Responsibility of the Witness',
-    event: 'World Press Photo Awards',
-    year: '2021',
-    link: '#',
-  },
-  {
-    title: 'Light, Shadow, and Human Connection',
-    event: 'Aperture Foundation',
-    year: '2020',
+    title: 'Estrategias de crecimiento para startups',
+    event: 'Eventos de emprendimiento',
+    year: '2022-2024',
     link: '#',
   },
 ]
@@ -46,7 +40,7 @@ export function Speaking() {
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Talks & Lectures</span>
+          <span className="text-sm text-gray-500 tracking-widest uppercase">Charlas y ponencias</span>
           <div className="w-6 h-px bg-gray-600 mt-2" />
         </motion.div>
 
@@ -54,7 +48,7 @@ export function Speaking() {
           {...fadeInUp}
           className="font-display text-[10vw] lg:text-section leading-none tracking-tight mb-16 lg:mb-24"
         >
-          SPEAKING
+          CHARLAS
         </motion.h2>
 
         {/* Talks List */}
@@ -75,7 +69,7 @@ export function Speaking() {
                     {talk.title}
                   </h3>
                   <p className="text-sm text-gray-500 mt-1 md:mt-2">
-                    Talk — {talk.event}
+                    Charla — {talk.event}
                   </p>
                 </div>
                 <span className="text-sm text-gray-600">{talk.year}</span>

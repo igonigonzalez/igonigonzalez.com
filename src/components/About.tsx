@@ -13,7 +13,7 @@ export function About() {
       <div className="max-w-7xl mx-auto">
         {/* Section Label */}
         <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">About Ignacio</span>
+          <span className="text-sm text-gray-500 tracking-widest uppercase">Sobre mí</span>
           <div className="w-6 h-px bg-gray-600 mt-2" />
         </motion.div>
 
@@ -25,11 +25,11 @@ export function About() {
           >
             <img
               src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Early work - Street photography"
+              alt="Ignacio trabajando"
               className="w-full h-auto grayscale"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              PARSONS SCHOOL OF DESIGN - NEW YORK / USA
+              DE INGENIERO A CMO - MADRID / ESPAÑA
             </p>
           </motion.div>
 
@@ -39,10 +39,10 @@ export function About() {
             className="order-1 lg:order-2 flex items-center"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              It may not be obvious, but Ignacio studied computer science at MIT, 
-              with a minor in visual arts. Preferring lenses to algorithms, 
-              he quickly abandoned a promising tech career to study Photography 
-              and Visual Storytelling at Parsons School of Design in New York.
+              Soy Ignacio Goñi (la mayoría me llama Goñi). Empecé mi carrera 
+              diseñando componentes aeronáuticos. Pero en 2012 descubrí el 
+              marketing digital — y me di cuenta de que era el campo perfecto 
+              para combinar lógica, creatividad y velocidad.
             </p>
           </motion.div>
         </div>
@@ -53,14 +53,15 @@ export function About() {
           className="mb-24 lg:mb-32"
         >
           <h2 className="font-display text-[8vw] lg:text-section leading-none tracking-tight text-gray-300">
-            "NAMED BY THE<br />
-            <span className="text-white underline underline-offset-8">2023 APERTURE AWARDS</span><br />
-            AS ONE OF THE TOP TEN<br />
-            PHOTOGRAPHERS IN THE WORLD."
+            "DE INGENIERO<br />
+            <span className="text-white underline underline-offset-8">AERONÁUTICO A CMO.</span><br />
+            20 AÑOS CONVIRTIENDO<br />
+            MARKETING EN MOTOR<br />
+            DE CRECIMIENTO."
           </h2>
           <p className="mt-6 text-sm text-gray-500 tracking-widest uppercase">
-            GLOBAL PHOTOGRAPHY<br />
-            DIRECTOR RANK
+            FUNDADOR DE YAMATO<br />
+            & PULSO DIARIO
           </p>
         </motion.div>
 
@@ -71,10 +72,11 @@ export function About() {
             className="flex items-center lg:text-right"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              Ignacio spent a little over a year in New York before moving to 
-              London as a Junior Photographer for Magnum Photos. He met some 
-              incredible people at the legendary agency, and they're still 
-              friends to this day.
+              Desde entonces he liderado el crecimiento de startups, escalado 
+              marcas globales como Loewe Perfumes dentro del ecosistema LVMH, 
+              y dirigido marketing para la primera startup de LLM de España. 
+              Hoy soy el fundador de YAMATO: un partner de marketing para quienes 
+              quieren resultados, no vanidad.
             </p>
           </motion.div>
 
@@ -84,11 +86,11 @@ export function About() {
           >
             <img
               src="https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Magnum Photos Office"
+              alt="Estrategia de marketing"
               className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              MAGNUM PHOTOS - LONDON / UK
+              YAMATO DIGITAL - MADRID / ESPAÑA
             </p>
           </motion.div>
         </div>
@@ -98,12 +100,12 @@ export function About() {
           <motion.div {...fadeInUp}>
             <img
               src="https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Ignacio shooting for National Geographic"
+              alt="Pulso Diario newsletter"
               className="w-full h-auto grayscale"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              SHOOTING FOR NATIONAL GEOGRAPHIC - PATAGONIA / AR<br />
-              (2019)
+              PULSO DIARIO - NEWSLETTER DIARIA<br />
+              (2.500+ SUSCRIPTORES)
             </p>
           </motion.div>
 
@@ -113,12 +115,11 @@ export function About() {
             className="flex items-center"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              From London, Ignacio moved to Berlin with VII Photo Agency. Where he 
-              worked under a great Art Director, Hans Mueller. From there he 
-              went on to build a truly global career, first as Staff Photographer 
-              then as Creative Director for the likes of National Geographic, 
-              Time Magazine, and The New York Times, before finally going 
-              independent in 2020.
+              También escribo Pulso Diario, una newsletter diaria leída por 
+              más de 2.500 suscriptores donde comparto ideas sobre marketing, 
+              estrategia, IA y emprendimiento sin el BS corporativo. 
+              Mi enfoque: convertir el marketing de un coste en una palanca 
+              de crecimiento.
             </p>
           </motion.div>
         </div>

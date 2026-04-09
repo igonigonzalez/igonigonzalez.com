@@ -88,7 +88,7 @@ export function Work() {
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Career</span>
+          <span className="text-sm text-gray-500 tracking-widest uppercase">Trayectoria</span>
           <div className="w-6 h-px bg-gray-600 mt-2" />
         </motion.div>
 
@@ -96,7 +96,7 @@ export function Work() {
           {...fadeInUp}
           className="font-display text-[10vw] lg:text-section leading-none tracking-tight mb-16 lg:mb-24"
         >
-          WORK<br />EXPERIENCE
+          EXPERIENCIA<br />PROFESIONAL
         </motion.h2>
 
         {/* Experiences */}
