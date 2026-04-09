@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 
 const contacts = [
-  { label: 'UNITED STATES', type: 'location', link: '#' },
-  { label: 'UNITED KINGDOM', type: 'location', link: '#' },
+  { label: 'YAMATO DIGITAL', type: 'business', link: 'https://yamato.digital' },
+  { label: 'PULSO DIARIO', type: 'newsletter', link: 'https://pulsodiario.igonigonzalez.com' },
 ]
 
 const fadeInUp = {
@@ -18,7 +18,7 @@ export function Contact() {
       <div className="max-w-7xl mx-auto">
         {/* Section Label */}
         <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Contact</span>
+          <span className="text-sm text-gray-500 tracking-widest uppercase">Contacto</span>
           <div className="w-6 h-px bg-gray-600 mt-2" />
         </motion.div>
 
@@ -30,7 +30,7 @@ export function Contact() {
           transition={{ duration: 1, ease: 'easeOut' }}
           className="font-display text-[12vw] lg:text-hero leading-none tracking-tight mb-8"
         >
-          Get in touch
+          Hablemos
         </motion.h2>
 
         <motion.div
@@ -44,12 +44,13 @@ export function Contact() {
           className="mb-12 lg:mb-16 max-w-2xl"
         >
           <h3 className="text-xl md:text-2xl lg:text-3xl text-white font-light leading-tight mb-4">
-            I'M NOTORIOUSLY<br />
-            SLOW AT GETTING<br />
-            BACK TO EMAILS
+            ¿CREES QUE EL<br />
+            MARKETING DE TU<br />
+            EMPRESA PODRÍA<br />
+            SER MEJOR?
           </h3>
           <p className="text-sm text-gray-500 tracking-widest uppercase">
-            IN A HURRY? PLEASE CONTACT MY AWESOME PRODUCERS
+            ESCRÍBEME Y LO DESCUBRIMOS JUNTOS
           </p>
         </motion.div>
 
@@ -59,6 +60,8 @@ export function Contact() {
             <motion.a
               key={contact.label}
               href={contact.link}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -82,30 +85,30 @@ export function Contact() {
           className="mt-16 lg:mt-24 pt-12 lg:pt-16 border-t border-gray-800"
         >
           <p className="text-sm text-gray-500 mb-6 lg:mb-8 tracking-widest uppercase">
-            Or reach me directly
+            O contacta directamente
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-16">
             <a
-              href="mailto:ignacio@gonzalez.photography"
+              href="mailto:ignacio@yamato.digital"
               className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
-              ignacio@gonzalez.photography
+              ignacio@yamato.digital
             </a>
             <a
-              href="https://instagram.com/ignaciogonzalez"
+              href="https://linkedin.com/in/igonigonzalez"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
-              Instagram
+              LinkedIn
             </a>
             <a
-              href="https://vimeo.com/ignaciogonzalez"
+              href="https://linktr.ee/igonigonzalez"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
-              Vimeo
+              Linktree
             </a>
           </div>
         </motion.div>
@@ -116,10 +119,10 @@ export function Contact() {
           className="mt-24 lg:mt-32 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-xs text-gray-600">
-            © {new Date().getFullYear()} Ignacio Goñi González Photography. All rights reserved.
+            © {new Date().getFullYear()} Ignacio Goñi González. Todos los derechos reservados.
           </p>
           <p className="text-xs text-gray-600">
-            New York / London
+            Madrid / España
           </p>
         </motion.footer>
       </div>

@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion'
 
 const skills = [
-  'Editorial Photography',
-  'Portrait Photography',
-  'Documentary',
-  'Commercial Campaigns',
-  'Art Direction',
-  'Visual Storytelling',
-  'Photo Editing',
-  'Creative Direction',
+  'Estrategia de Marketing',
+  'Growth Marketing',
+  'Paid Media & SEM',
+  'Consultoría Estratégica',
+  'Copywriting',
+  'Branding & Posicionamiento',
+  'E-commerce & CRO',
+  'IA aplicada al Marketing',
 ]
 
 const fadeInUp = {
@@ -24,7 +24,7 @@ export function Skills() {
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Expertise</span>
+          <span className="text-sm text-gray-500 tracking-widest uppercase">Especialidades</span>
           <div className="w-6 h-px bg-gray-600 mt-2" />
         </motion.div>
 
@@ -32,7 +32,7 @@ export function Skills() {
           {...fadeInUp}
           className="font-display text-[10vw] lg:text-section leading-none tracking-tight mb-12 lg:mb-20"
         >
-          SKILLS
+          HABILIDADES
         </motion.h2>
 
         {/* Skills List */}
