@@ -13,7 +13,7 @@ const navItems = [
 ]
 
 const socialLinks = [
-  { label: 'Email', href: 'mailto:igonigonzalez@gmail.com' },
+  
   { label: 'LinkedIn', href: 'https://linkedin.com/in/igonigonzalez' },
   { label: 'Newsletter', href: 'https://pulsodiario.igonigonzalez.com' },
 ]
