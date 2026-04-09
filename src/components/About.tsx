@@ -50,13 +50,12 @@ export function About() {
         {/* Quote Block */}
         <motion.div {...fadeInUp} className="mb-24 lg:mb-32">
           <h2 className="font-display text-[8vw] lg:text-section leading-none tracking-tight text-gray-300">
-            <span className="text-white underline underline-offset-8">"DE INGENIERO A CMO.</span>
+            <span className="text-white underline underline-offset-8">"DE INGENIERO A CMO"</span>
             <br />
-            20 AÑOS CONVIRTIENDO
+            PASANDO POR ESCRITOR,
             <br />
-            MARKETING EN MOTOR
-            <br />
-            DE CRECIMIENTO."
+            FUNDADOR, PROFESOR
+            <br />Y PONENTE.
           </h2>
           <p className="mt-6 text-sm text-gray-500 tracking-widest uppercase">
             FUNDADOR DE YAMATO
