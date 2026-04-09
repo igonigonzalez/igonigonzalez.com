@@ -133,19 +133,9 @@ export function Work() {
 
                 {/* Right Column - Description & Skills */}
                 <div className="lg:col-span-5">
-                  <p className="text-gray-400 leading-relaxed mb-6 text-sm lg:text-base">
+                  <p className="text-gray-400 leading-relaxed text-sm lg:text-base">
                     {exp.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    {exp.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1 text-xs text-gray-500 border border-gray-800 rounded-full"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </div>
             </motion.article>
