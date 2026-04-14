@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useActiveSection } from '@/hooks/useActiveSection'
 import { useScrollVisibility } from '@/hooks/useScrollVisibility'
 import { cn } from '@/lib/utils'
@@ -21,15 +21,6 @@ export function Navigation() {
   const activeSection = useActiveSection()
   const isVisible = useScrollVisibility()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [hasScrolled, setHasScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setHasScrolled(window.scrollY > 100)
-    }
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -113,16 +104,6 @@ export function Navigation() {
         className="hidden md:block fixed bottom-0 right-0 z-50 p-6 md:p-10"
       >
         <div className="flex flex-col items-end gap-3">
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className={cn(
-              'text-sm text-white mix-blend-difference transition-all duration-300 relative py-1',
-              'hover:opacity-60',
-              (!activeSection || activeSection === 'about' || !hasScrolled) && 'after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-white'
-            )}
-          >
-            Inicio
-          </button>
           {navItems.map((item) => (
             <button
               key={item.id}
