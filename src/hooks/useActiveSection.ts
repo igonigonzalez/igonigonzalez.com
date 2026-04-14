@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 const sections = ['hero', 'about', 'skills', 'work', 'education', 'writing', 'speaking', 'contact']
 
 export function useActiveSection() {
-  const [activeSection, setActiveSection] = useState<string>('about')
+  const [activeSection, setActiveSection] = useState<string>('hero')
 
   useEffect(() => {
     const observers: IntersectionObserver[] = []
