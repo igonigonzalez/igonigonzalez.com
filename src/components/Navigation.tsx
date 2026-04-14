@@ -4,6 +4,7 @@ import { useScrollVisibility } from '@/hooks/useScrollVisibility'
 import { cn } from '@/lib/utils'
 
 const navItems = [
+  { id: 'hero', label: 'Inicio' },
   { id: 'about', label: 'Sobre mí' },
   { id: 'skills', label: 'Habilidades' },
   { id: 'work', label: 'Experiencia' },
