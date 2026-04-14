@@ -118,7 +118,7 @@ export function Navigation() {
             className={cn(
               'text-sm text-white mix-blend-difference transition-all duration-300 relative py-1',
               'hover:opacity-60',
-              hasScrolled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
+              (!activeSection || activeSection === 'about' || !hasScrolled) && 'after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-white'
             )}
           >
             Inicio
