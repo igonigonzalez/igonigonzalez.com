@@ -84,10 +84,12 @@ export function Contact() {
 
         <motion.footer
           {...fadeInUp}
-          className="mt-24 lg:mt-32 pt-8 border-t border-gray-900"
+          className="mt-24 lg:mt-32 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4"
         >
-          {/* Language Selector - Always centered */}
-          <div className="flex items-center justify-center gap-4 mb-6">
+          <p className="text-xs text-gray-600">{t.contact.footer}</p>
+
+          {/* Language Selector - Centered */}
+          <div className="flex items-center gap-4 absolute left-1/2 -translate-x-1/2">
             <Link
               to="/"
               className={`text-xs uppercase tracking-widest transition-colors ${locale === 'es' ? 'text-white' : 'text-gray-600 hover:text-gray-400'}`}
@@ -103,10 +105,7 @@ export function Contact() {
             </Link>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-gray-600">{t.contact.footer}</p>
-            <p className="text-xs text-gray-600">{t.contact.location}</p>
-          </div>
+          <p className="text-xs text-gray-600">{t.contact.location}</p>
         </motion.footer>
       </div>
     </section>
