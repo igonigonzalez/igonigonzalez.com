@@ -8,7 +8,7 @@ export function Hero() {
     <section className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="/hero-image.jpg"
+          src="/ignacio-goni.jpg"
           alt="Ignacio Goñi González"
           className="w-full h-full object-cover object-center"
         />
