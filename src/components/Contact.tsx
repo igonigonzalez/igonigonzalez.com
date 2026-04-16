@@ -84,7 +84,7 @@ export function Contact() {
 
         <motion.footer
           {...fadeInUp}
-          className="mt-24 lg:mt-32 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4"
+          className="mt-24 lg:mt-32 pt-8 border-t border-gray-900 relative flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-xs text-gray-600">{t.contact.footer}</p>
 
