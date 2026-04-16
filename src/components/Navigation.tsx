@@ -56,6 +56,9 @@ export function Navigation() {
               {link.label}
             </a>
           ))}
+          <span className="text-white/30 mix-blend-difference">·</span>
+          <Link to="/" className={`text-sm mix-blend-difference transition-opacity ${locale === 'es' ? 'text-white' : 'text-white/50 hover:opacity-60'}`}>ES</Link>
+          <Link to="/en" className={`text-sm mix-blend-difference transition-opacity ${locale === 'en' ? 'text-white' : 'text-white/50 hover:opacity-60'}`}>EN</Link>
         </div>
       </div>
 
