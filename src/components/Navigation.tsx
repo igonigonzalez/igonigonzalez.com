@@ -11,7 +11,7 @@ const socialLinks = [
 
 export function Navigation() {
   const activeSection = useActiveSection()
-  const { t } = useLanguage()
+  const { t, locale } = useLanguage()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const navItems = [
