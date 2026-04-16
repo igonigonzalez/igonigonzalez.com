@@ -1,4 +1,5 @@
 import { Navigation } from '@/components/Navigation'
+import { useLanguageRedirect } from '@/hooks/useLanguageRedirect'
 import { GrainOverlay } from '@/components/GrainOverlay'
 import { SEOHead } from '@/components/SEOHead'
 import { Hero } from '@/components/Hero'
