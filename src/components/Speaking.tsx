@@ -1,31 +1,5 @@
 import { motion } from 'framer-motion'
-
-const talks = [
-  {
-    title: 'Apariciones en medios sobre IA y marketing',
-    event: 'Medios de comunicación',
-    year: '2023-2024',
-    link: '#',
-  },
-  {
-    title: 'Hackathons y eventos de IA',
-    event: 'Clibrain AI',
-    year: '2023',
-    link: '#',
-  },
-  {
-    title: 'Marketing digital en la industria del lujo',
-    event: 'LVMH / Loewe Perfumes',
-    year: '2018-2021',
-    link: '#',
-  },
-  {
-    title: 'Estrategias de crecimiento para startups',
-    event: 'Eventos de emprendimiento',
-    year: '2022-2024',
-    link: '#',
-  },
-]
+import { useLanguage } from '@/i18n/LanguageContext'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -35,25 +9,22 @@ const fadeInUp = {
 }
 
 export function Speaking() {
+  const { t } = useLanguage()
+
   return (
     <section id="speaking" className="section-padding bg-[#0d0d0d]">
       <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
         <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Charlas y ponencias</span>
+          <span className="text-sm text-gray-500 tracking-widest uppercase">{t.speaking.label}</span>
           <div className="w-6 h-px bg-gray-600 mt-2" />
         </motion.div>
 
-        <motion.h2
-          {...fadeInUp}
-          className="font-display text-[10vw] lg:text-section leading-none tracking-tight mb-16 lg:mb-24"
-        >
-          CHARLAS
+        <motion.h2 {...fadeInUp} className="font-display text-[10vw] lg:text-section leading-none tracking-tight mb-16 lg:mb-24">
+          {t.speaking.title}
         </motion.h2>
 
-        {/* Talks List */}
         <div className="space-y-0">
-          {talks.map((talk, index) => (
+          {t.speaking.talks.map((talk, index) => (
             <motion.a
               key={talk.title}
               href={talk.link}
@@ -65,12 +36,8 @@ export function Speaking() {
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-4">
                 <div>
-                  <h3 className="text-lg md:text-xl lg:text-2xl text-white font-light group-hover:text-gray-300 transition-colors">
-                    {talk.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 mt-1 md:mt-2">
-                    Charla — {talk.event}
-                  </p>
+                  <h3 className="text-lg md:text-xl lg:text-2xl text-white font-light group-hover:text-gray-300 transition-colors">{talk.title}</h3>
+                  <p className="text-sm text-gray-500 mt-1 md:mt-2">{talk.type} — {talk.event}</p>
                 </div>
                 <span className="text-sm text-gray-600">{talk.year}</span>
               </div>
