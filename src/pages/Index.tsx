@@ -1,5 +1,6 @@
 import { Navigation } from '@/components/Navigation'
 import { GrainOverlay } from '@/components/GrainOverlay'
+import { SEOHead } from '@/components/SEOHead'
 import { Hero } from '@/components/Hero'
 import { About } from '@/components/About'
 import { Skills } from '@/components/Skills'
@@ -12,6 +13,7 @@ import { Contact } from '@/components/Contact'
 export default function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEOHead />
       <GrainOverlay />
       <Navigation />
       <main>
@@ -27,4 +29,3 @@ export default function Index() {
     </div>
   )
 }
-
