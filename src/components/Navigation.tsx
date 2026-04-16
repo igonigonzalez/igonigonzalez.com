@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useActiveSection } from '@/hooks/useActiveSection'
 import { useLanguage } from '@/i18n/LanguageContext'
 import { cn } from '@/lib/utils'
@@ -10,7 +11,7 @@ const socialLinks = [
 
 export function Navigation() {
   const activeSection = useActiveSection()
-  const { t } = useLanguage()
+  const { t, locale } = useLanguage()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const navItems = [
@@ -55,6 +56,9 @@ export function Navigation() {
               {link.label}
             </a>
           ))}
+          <span className="text-white/30 mix-blend-difference">·</span>
+          <Link to="/" className={`text-sm mix-blend-difference transition-opacity ${locale === 'es' ? 'text-white' : 'text-white/50 hover:opacity-60'}`}>ES</Link>
+          <Link to="/en" className={`text-sm mix-blend-difference transition-opacity ${locale === 'en' ? 'text-white' : 'text-white/50 hover:opacity-60'}`}>EN</Link>
         </div>
       </div>
 
@@ -65,6 +69,9 @@ export function Navigation() {
               {link.label}
             </a>
           ))}
+          <span className="text-white/30 mix-blend-difference">·</span>
+          <Link to="/" className={`text-sm mix-blend-difference transition-opacity ${locale === 'es' ? 'text-white' : 'text-white/50 hover:opacity-60'}`}>ES</Link>
+          <Link to="/en" className={`text-sm mix-blend-difference transition-opacity ${locale === 'en' ? 'text-white' : 'text-white/50 hover:opacity-60'}`}>EN</Link>
         </div>
       </div>
 
