@@ -1,4 +1,5 @@
 import { Navigation } from '@/components/Navigation'
+import { useLanguageRedirect } from '@/hooks/useLanguageRedirect'
 import { GrainOverlay } from '@/components/GrainOverlay'
 import { SEOHead } from '@/components/SEOHead'
 import { Hero } from '@/components/Hero'
@@ -11,6 +12,8 @@ import { Speaking } from '@/components/Speaking'
 import { Contact } from '@/components/Contact'
 
 export default function Index() {
+  useLanguageRedirect()
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEOHead />
