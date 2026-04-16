@@ -1,31 +1,5 @@
 import { motion } from 'framer-motion'
-
-const articles = [
-  {
-    title: 'Por qué es tan relevante la demanda de The New York Times contra OpenAI y Microsoft',
-    publication: 'Artículo de opinión',
-    year: '2024',
-    link: '#',
-  },
-  {
-    title: 'IA y periodismo: ¿amigos o enemigos?',
-    publication: 'Podcast',
-    year: '2024',
-    link: '#',
-  },
-  {
-    title: 'The New York Times vs OpenAI: la lucha por los derechos de autor',
-    publication: 'Podcast',
-    year: '2023',
-    link: '#',
-  },
-  {
-    title: 'Pulso Diario — Newsletter diaria sobre marketing, estrategia e IA',
-    publication: 'Newsletter',
-    year: '2024',
-    link: 'https://pulsodiario.igonigonzalez.com',
-  },
-]
+import { useLanguage } from '@/i18n/LanguageContext'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -35,25 +9,22 @@ const fadeInUp = {
 }
 
 export function Writing() {
+  const { t } = useLanguage()
+
   return (
     <section id="writing" className="section-padding">
       <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
         <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Artículos y podcasts</span>
+          <span className="text-sm text-gray-500 tracking-widest uppercase">{t.writing.label}</span>
           <div className="w-6 h-px bg-gray-600 mt-2" />
         </motion.div>
 
-        <motion.h2
-          {...fadeInUp}
-          className="font-display text-[10vw] lg:text-section leading-none tracking-tight mb-16 lg:mb-24"
-        >
-          PUBLICACIONES
+        <motion.h2 {...fadeInUp} className="font-display text-[10vw] lg:text-section leading-none tracking-tight mb-16 lg:mb-24">
+          {t.writing.title}
         </motion.h2>
 
-        {/* Articles List */}
         <div className="space-y-0">
-          {articles.map((article, index) => (
+          {t.writing.articles.map((article, index) => (
             <motion.a
               key={article.title}
               href={article.link}
@@ -65,12 +36,8 @@ export function Writing() {
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-4">
                 <div>
-                  <h3 className="text-lg md:text-xl lg:text-2xl text-white font-light group-hover:text-gray-300 transition-colors">
-                    {article.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 mt-1 md:mt-2">
-                    {article.publication}
-                  </p>
+                  <h3 className="text-lg md:text-xl lg:text-2xl text-white font-light group-hover:text-gray-300 transition-colors">{article.title}</h3>
+                  <p className="text-sm text-gray-500 mt-1 md:mt-2">{article.publication}</p>
                 </div>
                 <span className="text-sm text-gray-600">{article.year}</span>
               </div>
