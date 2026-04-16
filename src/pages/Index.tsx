@@ -12,6 +12,8 @@ import { Speaking } from '@/components/Speaking'
 import { Contact } from '@/components/Contact'
 
 export default function Index() {
+  useLanguageRedirect()
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEOHead />
