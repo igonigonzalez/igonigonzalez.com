@@ -2,10 +2,10 @@ import { Translations } from './types'
 
 export const en: Translations = {
   meta: {
-    title: 'Ignacio Goñi González — Marketing & Growth',
-    description: 'Ignacio Goñi González — Founder of YAMATO and Pulso Diario. CMO, digital marketing strategist and growth expert.',
-    ogTitle: 'Ignacio Goñi González — Marketing & Growth',
-    ogDescription: 'Ignacio Goñi González — Founder of YAMATO and Pulso Diario. CMO, digital marketing strategist and growth expert.',
+    title: 'Ignacio Goñi González — CMO & Growth Strategist',
+    description: 'Portfolio of Ignacio Goñi González: Engineer, founder of YAMATO and Pulso Diario, CMO and digital marketing & growth strategist.',
+    ogTitle: 'Ignacio Goñi González — CMO & Growth (English)',
+    ogDescription: 'Founder of YAMATO and Pulso Diario. CMO and digital marketing & growth strategist.',
   },
   nav: {
     about: 'About',

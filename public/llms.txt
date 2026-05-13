@@ -1,0 +1,15 @@
+# Ignacio Goñi González
+
+> Portafolio personal de Ignacio Goñi González: Ingeniero, fundador de YAMATO y Pulso Diario, CMO y estratega de marketing digital y growth.
+
+Ignacio Goñi González pasó de la ingeniería aeronáutica al marketing digital. Hoy lidera YAMATO (CMO-as-a-Service) y escribe Pulso Diario, una newsletter diaria con más de 2.500 suscriptores sobre marketing, estrategia, IA y emprendimiento.
+
+## Pages
+
+- [Inicio (ES)](/): Portafolio principal en español con experiencia, formación, publicaciones y charlas.
+- [Home (EN)](/en): English version of the portfolio.
+
+## Optional
+
+- [YAMATO](https://yamato.studio): Agencia CMO-as-a-Service fundada por Ignacio.
+- [Pulso Diario](https://pulsodiario.igonigonzalez.com): Newsletter diaria sobre marketing, IA y emprendimiento.
