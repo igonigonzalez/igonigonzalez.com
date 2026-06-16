@@ -27,7 +27,7 @@ export interface Translations {
     quote: string[]
     quoteCaption: string
     imgCaption2: string
-    paragraph2: string
+    paragraph2: [string, string]
     imgCaption3: string
     paragraph3: string
   }
