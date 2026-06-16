@@ -48,7 +48,18 @@ export function About() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 mb-24 lg:mb-32">
           <motion.div {...fadeInUp} className="flex items-center lg:text-right">
-            <p className="text-base lg:text-lg text-gray-300 leading-relaxed">{t.about.paragraph2}</p>
+            <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
+              {t.about.paragraph2[0]}
+              <a
+                href="https://yamato.digital/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:text-white transition-colors"
+              >
+                YAMATO
+              </a>
+              {t.about.paragraph2[1]}
+            </p>
           </motion.div>
           <motion.div {...fadeInUp} transition={{ ...fadeInUp.transition, delay: 0.2 }}>
             <img src={aboutMarketing} alt="Estrategia de marketing digital" className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700" loading="lazy" width={1200} height={800} />

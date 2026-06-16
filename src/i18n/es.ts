@@ -32,7 +32,10 @@ export const es: Translations = {
     ],
     quoteCaption: 'FUNDADOR DE YAMATO\n& PULSO DIARIO',
     imgCaption2: 'YAMATO DIGITAL - MADRID / ESPAÑA',
-    paragraph2: 'Desde entonces he liderado el crecimiento de startups, escalado marcas globales como LOEWE Perfumes dentro del ecosistema LVMH, y dirigido marketing para la primera startup de LLM de España. Hoy soy el fundador de YAMATO: una consultora de marketing independiente (y sincera) para quieren resultados, no vanidad.',
+    paragraph2: [
+      'Desde entonces he liderado el crecimiento de startups, escalado marcas globales como LOEWE Perfumes dentro del ecosistema LVMH, y dirigido marketing para la primera startup de LLM de España. Hoy soy el fundador de ',
+      ': una consultora de marketing independiente (y sincera) para quieren resultados, no vanidad.',
+    ],
     imgCaption3: 'PULSO DIARIO - NEWSLETTER DIARIA\n(2.500+ SUSCRIPTORES)',
     paragraph3: 'También escribo Pulso Diario, una newsletter diaria leída por más de 2.500 suscriptores donde comparto ideas sobre marketing, estrategia, IA y emprendimiento sin el BS corporativo. Mi enfoque: convertir el marketing de un coste en una palanca de crecimiento.',
   },
