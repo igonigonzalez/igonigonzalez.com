@@ -43,7 +43,7 @@ export function Education() {
                     </div>
                   ) : (
                     <>
-                      <img src={images[index]} alt={item.school} className="w-full h-auto grayscale" loading="lazy" width={1200} height={800} />
+                      <img src={images[index]} alt={item.school} className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700" loading="lazy" width={1200} height={800} />
                       <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">{item.caption}</p>
                     </>
                   )}
@@ -56,7 +56,7 @@ export function Education() {
                 >
                   {isReversed ? (
                     <>
-                      <img src={images[index]} alt={item.school} className="w-full h-auto grayscale" loading="lazy" width={1200} height={800} />
+                      <img src={images[index]} alt={item.school} className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700" loading="lazy" width={1200} height={800} />
                       <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">{item.caption}</p>
                     </>
                   ) : (

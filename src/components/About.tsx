@@ -24,7 +24,7 @@ export function About() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 mb-24 lg:mb-32">
           <motion.div {...fadeInUp} className="order-2 lg:order-1">
-            <img src={aboutEngineering} alt="Industria aeronáutica" className="w-full h-auto grayscale" loading="lazy" width={1200} height={800} />
+            <img src={aboutEngineering} alt="Industria aeronáutica" className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700" loading="lazy" width={1200} height={800} />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">{t.about.imgCaption1}</p>
           </motion.div>
           <motion.div {...fadeInUp} transition={{ ...fadeInUp.transition, delay: 0.2 }} className="order-1 lg:order-2 flex items-center">
@@ -69,7 +69,7 @@ export function About() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
           <motion.div {...fadeInUp}>
-            <img src={aboutNewsletter} alt="Escribiendo Pulso Diario" className="w-full h-auto grayscale" loading="lazy" width={1200} height={800} />
+            <img src={aboutNewsletter} alt="Escribiendo Pulso Diario" className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700" loading="lazy" width={1200} height={800} />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase whitespace-pre-line">{t.about.imgCaption3}</p>
           </motion.div>
           <motion.div {...fadeInUp} transition={{ ...fadeInUp.transition, delay: 0.2 }} className="flex items-center">
