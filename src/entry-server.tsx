@@ -1,13 +1,13 @@
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom/server'
-import { HelmetProvider, type FilledContext } from 'react-helmet-async'
+import { HelmetProvider } from 'react-helmet-async'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { LanguageProvider } from '@/i18n/LanguageContext'
 import Index from '@/pages/Index'
 
 export function render(url: string) {
-  const helmetContext = {} as FilledContext
+  const helmetContext: { helmet?: any } = {}
   const queryClient = new QueryClient()
 
   const appHtml = renderToString(
