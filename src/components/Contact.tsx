@@ -1,11 +1,30 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '@/i18n/LanguageContext'
+import { Linkedin, Instagram, Youtube, Github, Mail } from 'lucide-react'
 
-const contacts = [
-  { label: 'YAMATO DIGITAL', link: 'https://yamato.digital' },
-  { label: 'PULSO DIARIO', link: 'https://pulsodiario.igonigonzalez.com' },
+const XIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+)
+
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.53V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+  </svg>
+)
+
+const socialLinks = [
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/igonigonzalez', Icon: Linkedin },
+  { label: 'X', href: 'https://x.com/igonigonzalez', Icon: XIcon },
+  { label: 'Instagram', href: 'https://instagram.com/igonigonzalez', Icon: Instagram },
+  { label: 'TikTok', href: 'https://tiktok.com/@igonigonzalez', Icon: TikTokIcon },
+  { label: 'YouTube', href: 'https://youtube.com/@igonigonzalez', Icon: Youtube },
+  { label: 'GitHub', href: 'https://github.com/igonigonzalez', Icon: Github },
+  { label: 'Email', href: 'mailto:ignacio@yamato.digital', Icon: Mail },
 ]
+
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -14,7 +33,15 @@ const fadeInUp = {
   transition: { duration: 0.8, ease: 'easeOut' }
 }
 
+
+
+const contacts = [
+  { label: 'YAMATO DIGITAL', link: 'https://yamato.digital' },
+  { label: 'PULSO DIARIO', link: 'https://pulsodiario.igonigonzalez.com' },
+]
+
 export function Contact() {
+
   const { t, locale, altPath, altLocale } = useLanguage()
   const questionLines = t.contact.question.split('\n')
 
@@ -69,18 +96,25 @@ export function Contact() {
 
         <motion.div {...fadeInUp} className="mt-16 lg:mt-24 pt-12 lg:pt-16 border-t border-gray-800">
           <p className="text-sm text-gray-500 mb-6 lg:mb-8 tracking-widest uppercase">{t.contact.directLabel}</p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-16">
-            <a href="mailto:ignacio@yamato.digital" className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4">
-              ignacio@yamato.digital
-            </a>
-            <a href="https://linkedin.com/in/igonigonzalez" target="_blank" rel="noopener noreferrer" className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4">
-              LinkedIn
-            </a>
-            <a href="https://linktr.ee/igonigonzalez" target="_blank" rel="noopener noreferrer" className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4">
-              Linktree
-            </a>
+          <div className="flex items-center gap-6 md:gap-8">
+            {socialLinks.map((social) => {
+              const { Icon } = social
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="text-gray-500 hover:text-white transition-colors duration-300"
+                >
+                  <Icon className="w-6 h-6" />
+                </a>
+              )
+            })}
           </div>
         </motion.div>
+
 
         <motion.footer
           {...fadeInUp}

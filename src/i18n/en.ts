@@ -181,7 +181,7 @@ export const en: Translations = {
     title: "Let's talk",
     question: "DO YOU THINK YOUR\nCOMPANY'S MARKETING\nCOULD BE\nBETTER?",
     cta: "WRITE ME AND LET'S FIND OUT TOGETHER",
-    directLabel: 'Or contact directly',
+    directLabel: 'Find me on',
     footer: `© ${new Date().getFullYear()} Ignacio Goñi González. All rights reserved.`,
     location: 'Madrid / Spain',
     languageLabel: 'Language',
