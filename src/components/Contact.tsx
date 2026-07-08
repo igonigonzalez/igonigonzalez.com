@@ -16,11 +16,11 @@ const TikTokIcon = ({ className }: { className?: string }) => (
 )
 
 const socialLinks = [
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/igonigonzalez', Icon: Linkedin },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/igonigonzalez/', Icon: Linkedin },
   { label: 'X', href: 'https://x.com/igonigonzalez', Icon: XIcon },
-  { label: 'Instagram', href: 'https://instagram.com/igonigonzalez', Icon: Instagram },
+  { label: 'Instagram', href: 'https://www.instagram.com/igonigonzalez/', Icon: Instagram },
   { label: 'TikTok', href: 'https://tiktok.com/@igonigonzalez', Icon: TikTokIcon },
-  { label: 'YouTube', href: 'https://youtube.com/@igonigonzalez', Icon: Youtube },
+  { label: 'YouTube', href: 'https://www.youtube.com/@igonigonzalez', Icon: Youtube },
   { label: 'GitHub', href: 'https://github.com/igonigonzalez', Icon: Github },
   { label: 'Email', href: 'mailto:ignacio@yamato.digital', Icon: Mail },
 ]
