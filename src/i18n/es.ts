@@ -181,7 +181,7 @@ export const es: Translations = {
     title: 'Hablemos',
     question: '¿CREES QUE EL\nMARKETING DE TU\nEMPRESA PODRÍA\nSER MEJOR?',
     cta: 'ESCRÍBEME Y LO DESCUBRIMOS JUNTOS',
-    directLabel: 'O contacta directamente',
+    directLabel: 'Encuéntrame en',
     footer: `© ${new Date().getFullYear()} Ignacio Goñi González. Todos los derechos reservados.`,
     location: 'Madrid / España',
     languageLabel: 'Idioma',
