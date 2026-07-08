@@ -96,18 +96,25 @@ export function Contact() {
 
         <motion.div {...fadeInUp} className="mt-16 lg:mt-24 pt-12 lg:pt-16 border-t border-gray-800">
           <p className="text-sm text-gray-500 mb-6 lg:mb-8 tracking-widest uppercase">{t.contact.directLabel}</p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-16">
-            <a href="mailto:ignacio@yamato.digital" className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4">
-              ignacio@yamato.digital
-            </a>
-            <a href="https://linkedin.com/in/igonigonzalez" target="_blank" rel="noopener noreferrer" className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4">
-              LinkedIn
-            </a>
-            <a href="https://linktr.ee/igonigonzalez" target="_blank" rel="noopener noreferrer" className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4">
-              Linktree
-            </a>
+          <div className="flex items-center gap-6 md:gap-8">
+            {socialLinks.map((social) => {
+              const { Icon } = social
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="text-gray-500 hover:text-white transition-colors duration-300"
+                >
+                  <Icon className="w-6 h-6" />
+                </a>
+              )
+            })}
           </div>
         </motion.div>
+
 
         <motion.footer
           {...fadeInUp}
