@@ -35,7 +35,13 @@ const fadeInUp = {
 
 
 
+const contacts = [
+  { label: 'YAMATO DIGITAL', link: 'https://yamato.digital' },
+  { label: 'PULSO DIARIO', link: 'https://pulsodiario.igonigonzalez.com' },
+]
+
 export function Contact() {
+
   const { t, locale, altPath, altLocale } = useLanguage()
   const questionLines = t.contact.question.split('\n')
 
