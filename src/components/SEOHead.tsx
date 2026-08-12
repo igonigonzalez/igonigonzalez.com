@@ -25,10 +25,14 @@ export function SEOHead() {
 
       {/* Open Graph */}
       <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Ignacio Goñi González" />
+      <meta property="og:locale" content={locale === 'es' ? 'es_ES' : 'en_US'} />
+      <meta property="og:locale:alternate" content={altLocale === 'es' ? 'es_ES' : 'en_US'} />
       <meta property="og:title" content={t.meta.ogTitle} />
       <meta property="og:description" content={t.meta.ogDescription} />
       <meta property="og:url" content={currentUrl} />
       <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/f7f42f3e-7742-4095-9c74-8d07dca9e734" />
+
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
