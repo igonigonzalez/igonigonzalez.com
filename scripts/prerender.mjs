@@ -27,7 +27,9 @@ function injectHelmet(html, helmet) {
     helmet.title?.toString() ?? '',
     helmet.meta?.toString() ?? '',
     helmet.link?.toString() ?? '',
+    helmet.script?.toString() ?? '',
   ].join('')
+
 
   out = out.replace('</head>', `${headTags}</head>`)
 
