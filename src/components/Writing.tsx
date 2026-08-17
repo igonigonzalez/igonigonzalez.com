@@ -27,7 +27,9 @@ export function Writing() {
           {t.writing.articles.map((article, index) => (
             <motion.a
               key={article.title}
-              href={article.link}
+              {...(article.link && article.link !== '#'
+                ? { href: article.link, target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

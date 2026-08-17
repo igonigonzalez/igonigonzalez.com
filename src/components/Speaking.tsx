@@ -27,7 +27,9 @@ export function Speaking() {
           {t.speaking.talks.map((talk, index) => (
             <motion.a
               key={talk.title}
-              href={talk.link}
+              {...(talk.link && talk.link !== '#'
+                ? { href: talk.link, target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
