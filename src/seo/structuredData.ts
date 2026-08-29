@@ -30,6 +30,17 @@ const EXPERTISE: Record<Locale, string[]> = {
   en: en.skills.list,
 }
 
+/**
+ * How to type a published piece, keyed by host. Anything in `writing.articles`
+ * with a real link and a known host joins the graph automatically, so filling in
+ * the remaining links is all it takes to grow it.
+ */
+const PUBLISHERS: Record<string, { type: string; publisher?: string }> = {
+  'theconversation.com': { type: 'Article', publisher: 'The Conversation' },
+  'www.cmmedia.es': { type: 'RadioEpisode', publisher: 'CMMedia' },
+  'open.spotify.com': { type: 'PodcastEpisode' },
+}
+
 const NEWSLETTER_DESCRIPTION: Record<Locale, string> = {
   es: 'Newsletter diaria sobre marketing, estrategia, IA y emprendimiento.',
   en: 'Daily newsletter on marketing, strategy, AI and entrepreneurship.',
@@ -51,6 +62,26 @@ export function buildStructuredData(locale: Locale) {
     name: item.school,
   }))
 
+  const publications = t.writing.articles
+    .filter((a) => a.link && a.link !== '#' && a.link !== NEWSLETTER_URL)
+    .map((a) => {
+      const host = a.link.replace(/^https?:\/\//, '').split('/')[0]
+      const known = PUBLISHERS[host]
+      if (!known) return null
+      return {
+        '@type': known.type,
+        name: a.title,
+        url: a.link,
+        datePublished: a.year,
+        inLanguage: 'es',
+        author: { '@id': personId },
+        ...(known.publisher
+          ? { publisher: { '@type': 'Organization', name: known.publisher } }
+          : {}),
+      }
+    })
+    .filter(Boolean)
+
   return {
     '@context': 'https://schema.org',
     '@graph': [
@@ -70,6 +101,7 @@ export function buildStructuredData(locale: Locale) {
         alumniOf,
         worksFor: { '@id': orgId },
         sameAs: PROFILES,
+        ...(publications.length ? { subjectOf: publications.map((p) => p.url) } : {}),
       },
       {
         '@type': 'Organization',
@@ -87,6 +119,7 @@ export function buildStructuredData(locale: Locale) {
         inLanguage: 'es',
         author: { '@id': personId },
       },
+      ...publications,
     ],
   }
 }
