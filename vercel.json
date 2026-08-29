@@ -7,6 +7,10 @@
         {
           "key": "Link",
           "value": "</index.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"service-doc\"; type=\"text/plain\", </llms-full.txt>; rel=\"service-desc\"; type=\"text/plain\", </en>; rel=\"alternate\"; hreflang=\"en\""
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
         }
       ]
     },
@@ -16,28 +20,30 @@
         {
           "key": "Link",
           "value": "</en/index.md>; rel=\"alternate\"; type=\"text/markdown\", </en/llms.txt>; rel=\"service-doc\"; type=\"text/plain\", </llms-full.txt>; rel=\"service-desc\"; type=\"text/plain\", </>; rel=\"alternate\"; hreflang=\"es\""
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
         }
       ]
     },
     {
       "source": "/(.*).md",
-      "headers": [{ "key": "Content-Type", "value": "text/markdown; charset=utf-8" }]
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        }
+      ]
     },
     {
       "source": "/(.*).txt",
-      "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "has": [{ "type": "header", "key": "accept", "value": ".*text/markdown.*" }],
-      "destination": "/index.md"
-    },
-    {
-      "source": "/en",
-      "has": [{ "type": "header", "key": "accept", "value": ".*text/markdown.*" }],
-      "destination": "/en/index.md"
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
     }
   ]
 }
