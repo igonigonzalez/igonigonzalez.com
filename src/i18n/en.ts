@@ -160,9 +160,9 @@ export const en: Translations = {
     label: 'Articles & podcasts',
     title: 'PUBLICATIONS',
     articles: [
-      { title: 'Why The New York Times lawsuit against OpenAI and Microsoft matters', publication: 'Opinion article', year: '2024', link: '#' },
-      { title: 'AI and journalism: friends or foes?', publication: 'Podcast', year: '2024', link: '#' },
-      { title: 'The New York Times vs OpenAI: the fight for copyright', publication: 'Podcast', year: '2023', link: '#' },
+      { title: 'Why The New York Times lawsuit against OpenAI and Microsoft matters', publication: 'Opinion article', year: '2024', link: 'https://theconversation.com/por-que-es-tan-relevante-la-demanda-de-the-new-york-times-contra-openai-y-microsoft-por-usar-sus-contenidos-sin-permiso-221079' },
+      { title: 'AI and journalism: friends or foes?', publication: 'Podcast', year: '2024', link: 'https://www.cmmedia.es/play/radio/808-radio/ok-6.html' },
+      { title: 'The New York Times vs OpenAI: the fight for copyright', publication: 'Podcast', year: '2023', link: 'https://open.spotify.com/episode/2VF7KrEvkW3b1S4dtIvIzW' },
       { title: 'Pulso Diario — Daily newsletter on marketing, strategy & AI', publication: 'Newsletter', year: '2024', link: 'https://pulsodiario.igonigonzalez.com' },
     ],
   },

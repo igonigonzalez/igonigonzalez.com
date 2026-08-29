@@ -1,13 +1,14 @@
 import { Helmet } from 'react-helmet-async'
 import { useLanguage } from '@/i18n/LanguageContext'
-
-const DOMAIN = 'https://igonigonzalez.com'
+import { buildStructuredData, DOMAIN } from '@/seo/structuredData'
 
 export function SEOHead() {
   const { locale, t, altLocale, altPath } = useLanguage()
 
   const currentUrl = locale === 'es' ? DOMAIN + '/' : DOMAIN + '/en'
   const altUrl = altLocale === 'es' ? DOMAIN + '/' : DOMAIN + '/en'
+  const structuredData = buildStructuredData(locale)
+  const markdownUrl = locale === 'es' ? DOMAIN + '/index.md' : DOMAIN + '/en/index.md'
 
   return (
     <Helmet>
@@ -17,6 +18,9 @@ export function SEOHead() {
 
       {/* Canonical */}
       <link rel="canonical" href={currentUrl} />
+
+      {/* Markdown alternate, for agents that ask for it */}
+      <link rel="alternate" type="text/markdown" href={markdownUrl} />
 
       {/* Hreflang */}
       <link rel="alternate" hrefLang="es" href={DOMAIN + '/'} />
@@ -39,6 +43,9 @@ export function SEOHead() {
       <meta name="twitter:title" content={t.meta.ogTitle} />
       <meta name="twitter:description" content={t.meta.ogDescription} />
       <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/f7f42f3e-7742-4095-9c74-8d07dca9e734" />
+
+      {/* Structured data, per language */}
+      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
     </Helmet>
   )
 }

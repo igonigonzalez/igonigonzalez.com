@@ -160,9 +160,9 @@ export const es: Translations = {
     label: 'Artículos y podcasts',
     title: 'PUBLICACIONES',
     articles: [
-      { title: 'Por qué es tan relevante la demanda de The New York Times contra OpenAI y Microsoft', publication: 'Artículo de opinión', year: '2024', link: '#' },
-      { title: 'IA y periodismo: ¿amigos o enemigos?', publication: 'Podcast', year: '2024', link: '#' },
-      { title: 'The New York Times vs OpenAI: la lucha por los derechos de autor', publication: 'Podcast', year: '2023', link: '#' },
+      { title: 'Por qué es tan relevante la demanda de The New York Times contra OpenAI y Microsoft', publication: 'Artículo de opinión', year: '2024', link: 'https://theconversation.com/por-que-es-tan-relevante-la-demanda-de-the-new-york-times-contra-openai-y-microsoft-por-usar-sus-contenidos-sin-permiso-221079' },
+      { title: 'IA y periodismo: ¿amigos o enemigos?', publication: 'Podcast', year: '2024', link: 'https://www.cmmedia.es/play/radio/808-radio/ok-6.html' },
+      { title: 'The New York Times vs OpenAI: la lucha por los derechos de autor', publication: 'Podcast', year: '2023', link: 'https://open.spotify.com/episode/2VF7KrEvkW3b1S4dtIvIzW' },
       { title: 'Pulso Diario — Newsletter diaria sobre marketing, estrategia e IA', publication: 'Newsletter', year: '2024', link: 'https://pulsodiario.igonigonzalez.com' },
     ],
   },

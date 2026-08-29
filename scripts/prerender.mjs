@@ -8,12 +8,21 @@ const ssrEntry = path.resolve('dist-ssr/entry-server.js')
 const templatePath = path.join(distDir, 'index.html')
 const template = fs.readFileSync(templatePath, 'utf-8')
 
-const { render } = await import(pathToFileURL(ssrEntry).href)
+const { render, buildMarkdown, buildLlms, buildLlmsFull } = await import(
+  pathToFileURL(ssrEntry).href
+)
 
 const routes = [
-  { url: '/', outFile: 'index.html' },
-  { url: '/en', outFile: 'en/index.html' },
+  { url: '/', outFile: 'index.html', locale: 'es', mdFile: 'index.md', llmsFile: 'llms.txt' },
+  { url: '/en', outFile: 'en/index.html', locale: 'en', mdFile: 'en/index.md', llmsFile: 'en/llms.txt' },
 ]
+
+function write(relPath, contents) {
+  const outPath = path.join(distDir, relPath)
+  fs.mkdirSync(path.dirname(outPath), { recursive: true })
+  fs.writeFileSync(outPath, contents)
+  console.log(`wrote ${path.relative('.', outPath)}`)
+}
 
 function injectHelmet(html, helmet) {
   if (!helmet) return html
@@ -40,7 +49,9 @@ function injectHelmet(html, helmet) {
   return out
 }
 
-for (const { url, outFile } of routes) {
+const markdown = {}
+
+for (const { url, outFile, locale, mdFile, llmsFile } of routes) {
   const { appHtml, helmet } = render(url)
   let page = template.replace(
     '<div id="root"></div>',
@@ -48,11 +59,17 @@ for (const { url, outFile } of routes) {
   )
   page = injectHelmet(page, helmet)
 
-  const outPath = path.join(distDir, outFile)
-  fs.mkdirSync(path.dirname(outPath), { recursive: true })
-  fs.writeFileSync(outPath, page)
-  console.log(`prerendered ${url} -> ${path.relative('.', outPath)}`)
+  write(outFile, page)
+
+  // Same content, served as Markdown for agents that ask for it.
+  markdown[locale] = buildMarkdown(locale)
+  write(mdFile, markdown[locale])
+  write(llmsFile, buildLlms(locale))
 }
+
+// One file with everything, generated from the same dictionaries as the site,
+// so it cannot go stale when the copy changes.
+write('llms-full.txt', buildLlmsFull(markdown.es, markdown.en))
 
 // Clean up SSR bundle so it doesn't ship.
 fs.rmSync(path.resolve('dist-ssr'), { recursive: true, force: true })

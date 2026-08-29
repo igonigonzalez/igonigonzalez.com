@@ -24,10 +24,16 @@ export function Speaking() {
         </motion.h2>
 
         <div className="space-y-0">
-          {t.speaking.talks.map((talk, index) => (
-            <motion.a
+          {t.speaking.talks.map((talk, index) => {
+            // Items without a URL are not links: rendering an <a> without href
+            // leaves a dead anchor that assistive tech and extractors trip over.
+            const hasLink = Boolean(talk.link) && talk.link !== '#'
+            const Item = hasLink ? motion.a : motion.div
+
+            return (
+            <Item
               key={talk.title}
-              {...(talk.link && talk.link !== '#'
+              {...(hasLink
                 ? { href: talk.link, target: '_blank', rel: 'noopener noreferrer' }
                 : {})}
               initial={{ opacity: 0, y: 30 }}
@@ -43,8 +49,9 @@ export function Speaking() {
                 </div>
                 <span className="text-sm text-gray-600">{talk.year}</span>
               </div>
-            </motion.a>
-          ))}
+            </Item>
+            )
+          })}
           <div className="border-t border-gray-800" />
         </div>
       </div>

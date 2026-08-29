@@ -24,10 +24,16 @@ export function Writing() {
         </motion.h2>
 
         <div className="space-y-0">
-          {t.writing.articles.map((article, index) => (
-            <motion.a
+          {t.writing.articles.map((article, index) => {
+            // Items without a URL are not links: rendering an <a> without href
+            // leaves a dead anchor that assistive tech and extractors trip over.
+            const hasLink = Boolean(article.link) && article.link !== '#'
+            const Item = hasLink ? motion.a : motion.div
+
+            return (
+            <Item
               key={article.title}
-              {...(article.link && article.link !== '#'
+              {...(hasLink
                 ? { href: article.link, target: '_blank', rel: 'noopener noreferrer' }
                 : {})}
               initial={{ opacity: 0, y: 30 }}
@@ -43,8 +49,9 @@ export function Writing() {
                 </div>
                 <span className="text-sm text-gray-600">{article.year}</span>
               </div>
-            </motion.a>
-          ))}
+            </Item>
+            )
+          })}
           <div className="border-t border-gray-800" />
         </div>
       </div>
