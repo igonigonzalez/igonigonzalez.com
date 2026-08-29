@@ -1,7 +1,9 @@
 # Two different things get asked of this site, and they are answered differently.
 #
 #   Reading it to answer someone's question, and citing it  →  yes, always.
-#   Using it to train a model                               →  no (owner's decision, 2026-08-29).
+#   Using it to train a model                               →  no (owner's decision, 2026-08-29),
+#                                                              stated as a signal, not enforced
+#                                                              with a Disallow.
 #
 # These are separate crawlers, and the providers document them as independently
 # controllable. OpenAI: "Each setting is independent of the others - for example,
@@ -10,7 +12,9 @@
 # future materials should be excluded from our AI model training datasets", while
 # Claude-User and Claude-SearchBot are the ones that carry search visibility.
 #
-# So saying no to training costs this site nothing in visibility.
+# Every crawler is allowed to fetch. The training preference is declared with
+# Content-Signal in every group rather than enforced by blocking, which is what
+# the site owner asked for.
 
 # --- Search engines and social ---
 
@@ -56,21 +60,26 @@ User-agent: Applebot
 Allow: /
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 
-# --- Model training: no ---
-# Each of these is documented by its provider as a training-only crawler.
-# Blocking them does not remove the site from any assistant's answers.
+# --- Model training crawlers ---
+# Allowed to fetch, but the signal above tells them not to train on this
+# content. This is the owner's explicit choice (2026-08-29): state the
+# preference, do not lock the door.
 
 User-agent: GPTBot
-Disallow: /
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: ClaudeBot
-Disallow: /
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: Google-Extended
-Disallow: /
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: Applebot-Extended
-Disallow: /
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: *
 Allow: /
