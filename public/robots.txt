@@ -1,3 +1,19 @@
+# Two different things get asked of this site, and they are answered differently.
+#
+#   Reading it to answer someone's question, and citing it  →  yes, always.
+#   Using it to train a model                               →  no (owner's decision, 2026-08-29).
+#
+# These are separate crawlers, and the providers document them as independently
+# controllable. OpenAI: "Each setting is independent of the others - for example,
+# a webmaster can allow OAI-SearchBot in order to appear in search results while
+# disallowing GPTBot." Anthropic: restricting ClaudeBot "signals that the site's
+# future materials should be excluded from our AI model training datasets", while
+# Claude-User and Claude-SearchBot are the ones that carry search visibility.
+#
+# So saying no to training costs this site nothing in visibility.
+
+# --- Search engines and social ---
+
 User-agent: Googlebot
 Allow: /
 
@@ -10,23 +26,7 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-# AI assistants and crawlers are welcome to read and cite this site.
-#
-# The Content-Signal line is repeated per group on purpose: a crawler with its
-# own group never reads the wildcard one, so a single line at the bottom would
-# be invisible to exactly the agents it addresses.
-#
-# `ai-train=no` is the owner's explicit decision (2026-08-29): this content may
-# be read to answer questions and cited, but not used to train models. Omitting
-# the token would mean "no preference expressed", which is not the same thing.
-#
-# Access is deliberately still allowed. The signal states the preference; a
-# Disallow would state it by locking the door, and would also remove this site
-# from the assistants that cite it.
-
-User-agent: GPTBot
-Allow: /
-Content-Signal: search=yes, ai-input=yes, ai-train=no
+# --- Assistants reading to answer and to cite: welcome ---
 
 User-agent: OAI-SearchBot
 Allow: /
@@ -36,7 +36,7 @@ User-agent: ChatGPT-User
 Allow: /
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 
-User-agent: ClaudeBot
+User-agent: Claude-SearchBot
 Allow: /
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 
@@ -48,9 +48,29 @@ User-agent: PerplexityBot
 Allow: /
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 
-User-agent: Google-Extended
+User-agent: Perplexity-User
 Allow: /
 Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+User-agent: Applebot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+# --- Model training: no ---
+# Each of these is documented by its provider as a training-only crawler.
+# Blocking them does not remove the site from any assistant's answers.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
 
 User-agent: *
 Allow: /
