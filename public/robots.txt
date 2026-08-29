@@ -16,40 +16,44 @@ Allow: /
 # own group never reads the wildcard one, so a single line at the bottom would
 # be invisible to exactly the agents it addresses.
 #
-# `ai-train` is deliberately absent. Whether this content may be used to train
-# models is the owner's call, not a technical default — leaving it out means
-# "no preference expressed" rather than silently granting it.
+# `ai-train=no` is the owner's explicit decision (2026-08-29): this content may
+# be read to answer questions and cited, but not used to train models. Omitting
+# the token would mean "no preference expressed", which is not the same thing.
+#
+# Access is deliberately still allowed. The signal states the preference; a
+# Disallow would state it by locking the door, and would also remove this site
+# from the assistants that cite it.
 
 User-agent: GPTBot
 Allow: /
-Content-Signal: search=yes, ai-input=yes
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: OAI-SearchBot
 Allow: /
-Content-Signal: search=yes, ai-input=yes
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: ChatGPT-User
 Allow: /
-Content-Signal: search=yes, ai-input=yes
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: ClaudeBot
 Allow: /
-Content-Signal: search=yes, ai-input=yes
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: Claude-User
 Allow: /
-Content-Signal: search=yes, ai-input=yes
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: PerplexityBot
 Allow: /
-Content-Signal: search=yes, ai-input=yes
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: Google-Extended
 Allow: /
-Content-Signal: search=yes, ai-input=yes
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: *
 Allow: /
-Content-Signal: search=yes, ai-input=yes
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 Sitemap: https://igonigonzalez.com/sitemap.xml
