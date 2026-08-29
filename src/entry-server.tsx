@@ -6,6 +6,9 @@ import { TooltipProvider } from '@/components/ui/tooltip'
 import { LanguageProvider } from '@/i18n/LanguageContext'
 import Index from '@/pages/Index'
 
+export { buildMarkdown } from '@/seo/markdown'
+export { buildLlms, buildLlmsFull } from '@/seo/llms'
+
 export function render(url: string) {
   const helmetContext: { helmet?: any } = {}
   const queryClient = new QueryClient()
