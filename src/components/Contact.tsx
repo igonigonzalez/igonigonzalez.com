@@ -15,7 +15,7 @@ const TikTokIcon = ({ className }: { className?: string }) => (
   </svg>
 )
 
-const socialLinks = [
+export const socialLinks = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/igonigonzalez/', Icon: Linkedin },
   { label: 'X', href: 'https://x.com/igonigonzalez', Icon: XIcon },
   { label: 'Instagram', href: 'https://www.instagram.com/igonigonzalez/', Icon: Instagram },
@@ -35,7 +35,7 @@ const fadeInUp = {
 
 
 
-const contacts = [
+export const contacts = [
   { label: 'YAMATO DIGITAL', link: 'https://yamato.digital' },
   { label: 'PULSO DIARIO', link: 'https://pulsodiario.igonigonzalez.com' },
 ]

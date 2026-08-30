@@ -1,21 +1,18 @@
 import { es } from '@/i18n/es'
 import { en } from '@/i18n/en'
 import type { Locale } from '@/i18n/types'
+import { socialLinks } from '@/components/Contact'
 
 export const DOMAIN = 'https://igonigonzalez.com'
 
 /**
- * Every profile linked from the site, so a model can resolve the identity by
- * cross-referencing them. Keep in sync with Contact.tsx.
+ * Every profile linked from the site, read from the component that renders them.
+ * It used to be a copy of that list kept in sync by hand, which is exactly the kind
+ * of duplication that goes stale the first time a profile changes.
  */
-const PROFILES = [
-  'https://www.linkedin.com/in/igonigonzalez/',
-  'https://x.com/igonigonzalez',
-  'https://www.instagram.com/igonigonzalez/',
-  'https://www.youtube.com/@igonigonzalez',
-  'https://tiktok.com/@igonigonzalez',
-  'https://github.com/igonigonzalez',
-]
+const PROFILES = socialLinks
+  .filter((s) => !s.href.startsWith('mailto:'))
+  .map((s) => s.href)
 
 const YAMATO_URL = 'https://yamato.digital'
 const NEWSLETTER_URL = 'https://pulsodiario.igonigonzalez.com'

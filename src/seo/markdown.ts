@@ -1,11 +1,12 @@
 import { es } from '@/i18n/es'
 import { en } from '@/i18n/en'
 import type { Locale } from '@/i18n/types'
+import { contacts, socialLinks } from '@/components/Contact'
 import { DOMAIN } from './structuredData'
 
 const LABELS: Record<Locale, Record<string, string>> = {
-  es: { about: 'Sobre mí', contact: 'Contacto', altLang: 'English version' },
-  en: { about: 'About', contact: 'Contact', altLang: 'Versión en español' },
+  es: { about: 'Sobre mí', contact: 'Contacto', altLang: 'English version', email: 'Email' },
+  en: { about: 'About', contact: 'Contact', altLang: 'Versión en español', email: 'Email' },
 }
 
 /**
@@ -50,7 +51,17 @@ export function buildMarkdown(locale: Locale): string {
   t.speaking.talks.forEach((s) => out.push(`- ${s.title} (${s.event}, ${s.year})`))
   out.push('')
 
-  out.push(`## ${l.contact}`, '', t.contact.location, '', `[${l.altLang}](${altUrl})`, '')
+  // Lo que un lector necesita para dar el siguiente paso. Sin esto, la seccion de
+  // contacto era el nombre de una ciudad: informativa para un humano que ve los iconos,
+  // inservible para quien solo tiene el texto.
+  out.push(`## ${l.contact}`, '')
+  const email = socialLinks.find((s) => s.href.startsWith('mailto:'))
+  if (email) out.push(`- ${l.email}: ${email.href.replace('mailto:', '')}`)
+  contacts.forEach((c) => out.push(`- ${c.label}: ${c.link}`))
+  socialLinks
+    .filter((s) => !s.href.startsWith('mailto:'))
+    .forEach((s) => out.push(`- ${s.label}: ${s.href}`))
+  out.push('', t.contact.location, '', `[${l.altLang}](${altUrl})`, '')
 
   return out.join('\n')
 }
