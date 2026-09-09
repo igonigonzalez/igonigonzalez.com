@@ -2,9 +2,9 @@ import { Translations } from './types'
 
 export const en: Translations = {
   meta: {
-    title: 'Ignacio Goñi González — CMO & Growth Strategist',
+    title: 'Ignacio Goñi González — Marketing & Growth',
     description: 'Portfolio of Ignacio Goñi González: Engineer, founder of YAMATO and Pulso Diario, CMO and digital marketing & growth strategist.',
-    ogTitle: 'Ignacio Goñi González — CMO & Growth (English)',
+    ogTitle: 'Ignacio Goñi González — Marketing & Growth',
     ogDescription: 'Founder of YAMATO and Pulso Diario. CMO and digital marketing & growth strategist.',
   },
   nav: {
@@ -18,6 +18,7 @@ export const en: Translations = {
     close: 'Close',
   },
   hero: {
+    subtitle: 'MARKETING & GROWTH',
     tagline: '.Engineer .Founder .CMO .Human',
   },
   about: {

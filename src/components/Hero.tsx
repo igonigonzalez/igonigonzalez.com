@@ -31,15 +31,28 @@ export function Hero() {
               <span className="mt-[0.06em] block text-white">GOÑI</span>
               <span className="block text-white">GONZÁLEZ</span>
             </h1>
-            
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="mt-6 md:mt-8 text-sm sm:text-base text-white/80 max-w-sm md:max-w-md leading-relaxed"
-            >
-              {t.hero.tagline}
-            </motion.p>
+
+            {/* Matches the h1 font size so the em offsets below cancel out each
+                glyph's left side bearing and every line shares one optical edge. */}
+            <div className="text-[15vw] sm:text-[12vw] md:text-hero pl-[0.033em]">
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 0.8 }}
+                className="-ml-[0.041em] mt-4 md:mt-6 font-display text-xl sm:text-2xl md:text-3xl tracking-wide text-white uppercase"
+              >
+                {t.hero.subtitle}
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="-ml-[0.078em] mt-4 md:mt-6 text-sm sm:text-base text-white/80 max-w-sm md:max-w-md leading-relaxed"
+              >
+                {t.hero.tagline}
+              </motion.p>
+            </div>
           </motion.div>
         </div>
       </div>

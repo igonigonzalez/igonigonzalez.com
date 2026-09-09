@@ -18,6 +18,7 @@ export interface Translations {
     close: string
   }
   hero: {
+    subtitle: string
     tagline: string
   }
   about: {
