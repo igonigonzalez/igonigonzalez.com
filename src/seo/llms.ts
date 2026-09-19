@@ -7,7 +7,7 @@ const COPY = {
   es: {
     pages: 'Páginas',
     optional: 'Opcional',
-    home: 'Portafolio principal en español: experiencia, formación, publicaciones y charlas.',
+    home: 'Portafolio principal en español: experiencia, formación, mentorías, publicaciones y charlas.',
     homeMd: 'La misma página en Markdown.',
     alt: 'English version of the portfolio.',
     yamato: 'Consultora de marketing independiente fundada por Ignacio.',
@@ -16,7 +16,7 @@ const COPY = {
   en: {
     pages: 'Pages',
     optional: 'Optional',
-    home: 'Main portfolio in English: experience, education, writing and talks.',
+    home: 'Main portfolio in English: experience, education, mentoring, writing and talks.',
     homeMd: 'The same page in Markdown.',
     alt: 'Versión en español del portafolio.',
     yamato: 'Independent marketing consultancy founded by Ignacio.',

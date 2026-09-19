@@ -7,6 +7,7 @@ import { About } from '@/components/About'
 import { Skills } from '@/components/Skills'
 import { Work } from '@/components/Work'
 import { Education } from '@/components/Education'
+import { Mentoring } from '@/components/Mentoring'
 import { Writing } from '@/components/Writing'
 import { Speaking } from '@/components/Speaking'
 import { Contact } from '@/components/Contact'
@@ -24,6 +25,7 @@ export default function Index() {
         <Skills />
         <Work />
         <Education />
+        <Mentoring />
         <Writing />
         <Speaking />
         <Contact />

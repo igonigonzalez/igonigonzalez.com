@@ -19,6 +19,7 @@ export function Navigation() {
     { id: 'skills', label: t.nav.skills },
     { id: 'work', label: t.nav.work },
     { id: 'education', label: t.nav.education },
+    { id: 'mentoring', label: t.nav.mentoring },
     { id: 'writing', label: t.nav.writing },
     { id: 'speaking', label: t.nav.speaking },
   ]

@@ -39,6 +39,13 @@ export function buildMarkdown(locale: Locale): string {
     out.push(`### ${e.degree}`, '', `${e.school} · ${e.period}`, '', e.description, '')
   })
 
+  out.push(`## ${t.mentoring.title}`, '')
+  t.mentoring.items.forEach((m) => {
+    const detail = m.context ? `${m.organization} — ${m.context}` : m.organization
+    out.push(`- ${m.role} · ${detail} · ${m.period}`)
+  })
+  out.push('')
+
   out.push(`## ${t.writing.title}`, '')
   t.writing.articles.forEach((a) => {
     const link = a.link && a.link !== '#' ? ` — ${a.link}` : ''

@@ -12,6 +12,7 @@ export const en: Translations = {
     skills: 'Skills',
     work: 'Experience',
     education: 'Education',
+    mentoring: 'Mentoring',
     writing: 'Writing',
     speaking: 'Speaking',
     menu: 'Menu',
@@ -154,6 +155,28 @@ export const en: Translations = {
         degree: 'Mechanical Engineering',
         description: 'Core engineering education that laid the foundation for analytical thinking, problem-solving, and technical rigor that Ignacio applies today to marketing and digital strategy.',
         period: 'SEP 2000 — SEP 2004',
+      },
+    ],
+  },
+  mentoring: {
+    label: 'Guidance',
+    title: 'MENTORING',
+    items: [
+      {
+        organization: 'Conector Startup Accelerator',
+        role: 'Startup Mentor',
+        period: 'AUG 2026 — PRESENT',
+      },
+      {
+        organization: 'Universidad Icesi',
+        role: 'Mentor for Students, Entrepreneurs and Business Owners',
+        period: 'AUG 2026 — PRESENT',
+      },
+      {
+        organization: 'Madrid Emprende',
+        role: 'Startup Mentor',
+        period: 'AUG 2026 — PRESENT',
+        context: 'Public mentor network of the Madrid City Council',
       },
     ],
   },

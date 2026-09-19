@@ -12,6 +12,7 @@ export const es: Translations = {
     skills: 'Habilidades',
     work: 'Experiencia',
     education: 'Formación',
+    mentoring: 'Mentorías',
     writing: 'Publicaciones',
     speaking: 'Charlas',
     menu: 'Menú',
@@ -154,6 +155,28 @@ export const es: Translations = {
         degree: 'Ingeniería Mecánica',
         description: 'Formación base en ingeniería mecánica que sentó las bases del pensamiento analítico, resolución de problemas y rigor técnico que Ignacio aplica hoy al marketing y la estrategia digital.',
         period: 'SEP 2000 — SEP 2004',
+      },
+    ],
+  },
+  mentoring: {
+    label: 'Acompañamiento',
+    title: 'MENTORÍAS',
+    items: [
+      {
+        organization: 'Conector Startup Accelerator',
+        role: 'Startup Mentor',
+        period: 'AGO 2026 — PRESENTE',
+      },
+      {
+        organization: 'Universidad Icesi',
+        role: 'Mentor para Estudiantes, Emprendedores y Empresarios',
+        period: 'AGO 2026 — PRESENTE',
+      },
+      {
+        organization: 'Madrid Emprende',
+        role: 'Startup Mentor',
+        period: 'AGO 2026 — PRESENTE',
+        context: 'Red pública de mentores del Ayuntamiento de Madrid',
       },
     ],
   },

@@ -148,6 +148,10 @@ export function buildStructuredData(locale: Locale) {
         workLocation: { '@type': 'Place', name: es.contact.location },
         knowsAbout: t.skills.list,
         alumniOf: institutions(),
+        affiliation: es.mentoring.items.map((item) => ({
+          '@type': 'Organization',
+          name: item.organization,
+        })),
         worksFor: { '@id': orgId },
         sameAs: PROFILES,
       },

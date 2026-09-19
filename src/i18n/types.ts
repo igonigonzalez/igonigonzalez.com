@@ -12,6 +12,7 @@ export interface Translations {
     skills: string
     work: string
     education: string
+    mentoring: string
     writing: string
     speaking: string
     menu: string
@@ -57,6 +58,16 @@ export interface Translations {
       degree: string
       description: string
       period: string
+    }[]
+  }
+  mentoring: {
+    label: string
+    title: string
+    items: {
+      organization: string
+      role: string
+      period: string
+      context?: string
     }[]
   }
   writing: {
