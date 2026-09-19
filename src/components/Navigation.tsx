@@ -36,10 +36,21 @@ export function Navigation() {
     <>
       <div className="fixed top-0 left-0 right-0 z-50 p-6 flex justify-between items-start md:hidden">
         <div className="relative">
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-sm text-white mix-blend-difference">
-            {mobileMenuOpen ? t.nav.close : t.nav.menu}
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="relative flex h-11 w-11 -ml-2 items-center justify-center text-white mix-blend-difference focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-nav"
+            aria-label={mobileMenuOpen ? t.nav.close : t.nav.menu}
+          >
+            <span className="relative block h-3.5 w-5" aria-hidden="true">
+              <span className={cn('absolute left-0 top-0 h-px w-full origin-center bg-current transition-transform duration-300 ease-out', mobileMenuOpen && 'translate-y-[6.5px] rotate-45')} />
+              <span className={cn('absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-current transition-opacity duration-300 ease-out', mobileMenuOpen && 'opacity-0')} />
+              <span className={cn('absolute left-0 bottom-0 h-px w-full origin-center bg-current transition-transform duration-300 ease-out', mobileMenuOpen && '-translate-y-[6.5px] -rotate-45')} />
+            </span>
           </button>
-          <div className={cn('flex flex-col items-start gap-3 mt-6 transition-all duration-300', mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none')}>
+          <div id="mobile-nav" className={cn('flex flex-col items-start gap-3 mt-6 transition-all duration-300', mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none')}>
             {navItems.map((item) => (
               <button
                 key={item.id}
