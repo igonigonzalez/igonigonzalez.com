@@ -164,19 +164,29 @@ export const es: Translations = {
     items: [
       {
         organization: 'Conector Startup Accelerator',
-        role: 'Startup Mentor',
+        role: 'Mentor de Startups',
+        location: 'Barcelona, España',
         period: 'AGO 2026 — PRESENTE',
       },
       {
         organization: 'Universidad Icesi',
         role: 'Mentor para Estudiantes, Emprendedores y Empresarios',
+        location: 'Cali, Colombia',
         period: 'AGO 2026 — PRESENTE',
       },
       {
         organization: 'Madrid Emprende',
-        role: 'Startup Mentor',
+        role: 'Mentor de Startups',
+        location: 'Madrid, España',
         period: 'AGO 2026 — PRESENTE',
         context: 'Red pública de mentores del Ayuntamiento de Madrid',
+      },
+      {
+        organization: 'PwC',
+        role: 'Mentor de Startups',
+        location: 'Madrid, España',
+        period: 'NOV 2025 — MAR 2026',
+        context: 'Participación en las dos ediciones del programa de aceleración y escalado Digital Entrepreneurship Networks de la Comunidad de Madrid (RETECH), promovido por PwC Digital Acceleration Program.',
       },
     ],
   },

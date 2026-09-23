@@ -36,6 +36,7 @@ export function Mentoring() {
               <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 md:gap-8">
                 <div>
                   <h3 className="text-lg md:text-xl lg:text-2xl text-white font-light">{item.organization}</h3>
+                  <p className="text-sm text-gray-600 mt-1 md:mt-2">{item.location}</p>
                   {item.context ? (
                     <p className="text-sm text-gray-500 mt-1 md:mt-2">{item.context}</p>
                   ) : null}

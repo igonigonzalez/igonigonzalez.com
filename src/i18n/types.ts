@@ -66,6 +66,7 @@ export interface Translations {
     items: {
       organization: string
       role: string
+      location: string
       period: string
       context?: string
     }[]

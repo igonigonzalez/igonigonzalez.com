@@ -42,7 +42,7 @@ export function buildMarkdown(locale: Locale): string {
   out.push(`## ${t.mentoring.title}`, '')
   t.mentoring.items.forEach((m) => {
     const detail = m.context ? `${m.organization} — ${m.context}` : m.organization
-    out.push(`- ${m.role} · ${detail} · ${m.period}`)
+    out.push(`- ${m.role} · ${detail} · ${m.location} · ${m.period}`)
   })
   out.push('')
 
